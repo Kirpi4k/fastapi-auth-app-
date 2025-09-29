@@ -79,3 +79,4 @@ async def logout(request: Request):
     response = RedirectResponse("/login", status_code=302)
     response.delete_cookie("user_email")
     return response
+
