@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Comforty</title>
+    <link rel="icon"  href="/static/image/ Icon (3).png">
+</head>
+<body>
+    <header>
+        <a class="anav2" href="/"><div class="nav1mologinmobile">
+            <img src="/static/image/488d3a2d-1a50-4678-b1da-98caf6a47636.png" width="80px" height="80px">
+            <h1>Comforty</h1>
+        </div></a>
+        <nav class="nav1 nav1mologin">
+            <div class="mainnav1 main">
+                    <div class="divnavtext">
+                        <img class="imgnav1" src="/static/image/ Vector.png" height="10px" width="13px">
+                        <p1>Free shipping on all orders over $50</p1>
+                    </div>
+                <div class="nav1pravblock">
+                    <div>
+                        <a href="#">Eng</a>
+                        <img class="imgnav12" src="/static/image/Group.svg" height="7px" width="10px"> 
+                    </div>
+                    <div class="divnavtext1">
+                        <a href="#">Faqs</a>
+                    </div>
+                    <div class="divnavtext">
+                        <img class="imgnav1" src="/static/image/alert-circle 1.svg" height="16px" width="16px">
+                        <a href="#">Need Help</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="nav2">
+            <div class="mainnav2 main">
+                <div class="nav2pravo">
+                    <a class="abutton" href="/"><div class="divnav2text">
+                        <img class="imgnav1" src="/static/image/Logo Icon (1).png" height="40px" width="40px">
+                        <h1>Comforty</h1>
+                    </div></a>
+                    <div class="navblock">
+                        <input type="text" placeholder="Search here..." class="nav-input">
+                        <img  src="/static/image/search 1.png" width="22px" height="22px">
+                    </div>
+                </div>
+                <div class="nav2vlevo">
+                    <div class="navblock2">
+                        <img src="/static/image/Buy 2.png" width="22px" height="22px">
+                        <p1>Cart</p1>
+                        <img src="/static/image/No.png" width="20px" height="20px">
+                    </div>
+                    <div class="navblock3">
+                        <img src="/static/image/Heart 1.png" width="22px" height="22px">
+                    </div>
+                    <a href="login.html"><div class="navblock4">
+                        <img src="/static/image/Profile.png" width="22px" height="22px">
+                    </div></a>
+                </div>
+            </div>
+        </nav>
+        <nav class="nav3">
+            <div class="mainnav3 main">
+                <div class="navvlevo">
+                    <div class="navblock5">
+                        <img  src="/static/image/Menu.png" width="18px" height="14px">
+                        <p1>All Categories  </p1>
+                    </div>
+                    <a href="#" class="anav3">Home</a>
+                    <a href="#" class="anav3">Shop</a>
+                    <a href="#" class="anav3">Product</a>
+                    <a href="#" class="anav3">Pages</a>
+                    <a href="#" class="anav3">About</a>
+                </div>
+                <div>
+                    <p1 class="p1ntextcolornav3">Contact:</p1>
+                    <p1>(808) 555-0111</p1>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="glavmain1">
+                <div class="glavlog1 main">
+                    <div>
+                        <p1 class="fottext1">Home > Account > <p1 class="fottext2">Sign In</p1></p1>
+                        <h1 class="h1log">Sign In</h1>
+                    </div>
+                </div>
+        </section>
+        <section class="seclog">
+            <div class="divlog">
+                <h1 class="h1login">Sign In</h1>
+                 <form method="post" action="/login">
+                <div class="divemail"><input type="email" name="email" class="inputfield" placeholder="Email" required></div>
+                <div class="divemail1">
+                    <input type="password" id="passwordInput" name="password" class="inputfield" placeholder="Password" required>   
+                    <img src="/static/image/Eye.png" class="eye-icon" onclick="togglePassword()">
+                </div>
+                <div class="divforgetpassword">
+                    <div class="divremmeber-me">
+                        <div class="divforgetpassword1">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox">
+                                <div class="divremmeber-mecvad"><svg class="checkmark-icon" viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 12-12-1.4-1.4z"/></svg></div>
+                            </label>
+                            <p1 class="p1remmeber-me">Remember me</p1>
+                        </div>
+                        <a href="#" class="navedprodeuct">Forget Password</a>    
+                    </div>
+                </div>
+                <button type="submit" class="divsingin">
+                    <p1>Sign In</p1>
+                    <img class="logimgbatton" src="/static/image/Right 24px.png" width="24px" height="24px">
+                </button>
+                </form>
+                {% if error %}
+                    <p style="color:red">{{ error }}</p>
+                {% endif %}
+                <p1 class="p1log">Don’t have account? <a href="/register" class="navedprodeuct"> Sign Up</a></p1>
+            </div>
+            <p id="loginMessage"></p>
+        </section>
+        <footer>
+            <section class="fot">
+                <div class="fotmain fotnav main">
+                    <div class="fotnavblock">
+                        <div class="divnavfotlogo">
+                            <img class="imgnavfot" src="/static/image/ Icon (1).png" height="40px" width="40px">
+                            <h1>Comforty</h1>
+                        </div>
+                        <p1 class="fottext">Vivamus tristique odio sit amet velit semper,<br> eu posuere turpis interdum. <br> egestas purus </p1>
+                        <div class="fotlogodiv">
+                            <img src="/static/image/Group 44.png" alt="">
+                            <img class="imglogofot" src="/static/image/Group 48.png" alt="">
+                            <img class="imglogofot" src="/static/image/Group 50.png" alt="">
+                            <img class="imglogofot" src="/static/image/Group 46.png" alt="">
+                            <img class="imglogofot" src="/static/image/Group 47.png" alt="">
+                        </div>
+                    </div>
+                    <div class="fotnavblock2">
+                        <ul>
+                            <li><h4 class="h5fot">CATEGORY</h4></li>
+                            <li class="litext1"><a href="#" class="navedprodeuct">Sofa</a></li>
+                            <li class="litext"><a href="#" class="navedprodeuct">Armchair</a></li>
+                            <li class="litext"><a href="#" class="navedprodeuct">Wing Chair</a></li>
+                            <li class="litext"><a href="#" class="navedprodeuct">Desk Chair</a></li>
+                            <li class="litext"><a href="#" class="navedprodeuct">wooden Chair</a></li>
+                            <li class="litext"><a href="#" class="navedprodeuct">Park Bench</a></li>
+                        </ul>
+                    </div>
+                    <div class="fotnavblock3">
+                        <ul>
+                            <li><h4 class="h5fot">SUPPORT</h4></li>
+                            <li class="litext1"><a href="#" class="navedprodeuct">Help & Support</a></li>
+                            <li class="litext"><a href="#" class="navedprodeuct">Tearms & Conditions</a></li>
+                            <li class="litext"><a href="#" class="navedprodeuct">Privacy Policy</a></li>
+                            <li class="litext"><a href="#" class="navedprodeuct">Help</a></li>
+                        </ul>
+                    </div>
+                    <div class="fotnavblock4">
+                        <h4 class="h5fot">NEWSLETTER</h4>
+                        <div class="blockfotglavbotton">
+                            <input type="email" class="email-input" placeholder="Your email">
+                            <div class="blockfotbotton2"><h4 class="h5fot1">Subscribe</h4></div>
+                        </div>
+                        <p1 class="fottext">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Nullam tincidunt erat enim. </p1>
+                    </div>
+                </div>
+            </section>
+            <section class="fot1">
+                    <div class="fotmain1 main">
+                        <p1 class="fottext1">@ 2021 - Blogy - Designed & Develop by <p1 class="fottext2">Zakirsoft</p1></p1>
+                        <div class="divlogofot1">
+                            <div class="divlogo">
+                                <img src="/static/image/Group 11.png">
+                                <img class="imglogo" src="/static/image/Group 12.png">
+                            </div>
+                            <div class="divlogo"> 
+                                <img class="imglogo1" src="/static/image/Vector (1).png">
+                                <img class="imglogo" src="/static/image/Union.png">
+                            </div>
+                        </div>
+                    </div>
+            </section>
+        </footer>
+        <script>
+            function togglePassword() {
+              const passwordField = document.getElementById("passwordInput");
+              const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+              passwordField.setAttribute("type", type);
+            }
+          </script>
+          <script>
+document.getElementById("loginBtn").addEventListener("click", async (e) => {
+    e.preventDefault(); // чтобы кнопка не перезагружала страницу
+
+    const username = document.getElementById("usernameInput").value;
+    const password = document.getElementById("passwordInput").value;
+
+    if (!username || !password) {
+        document.getElementById("loginMessage").innerText = "Введите логин и пароль";
+        return;
+    }
+
+    const data = { username, password };
+
+    try {
+        const response = await fetch("http://127.0.0.1:8000/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+        document.getElementById("loginMessage").innerText = result.message || result.detail;
+    } catch (error) {
+        document.getElementById("loginMessage").innerText = "Ошибка соединения с сервером";
+    }
+});
+</script>          
+    </main>
+</body>
+</html>
